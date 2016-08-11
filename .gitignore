@@ -2,3 +2,4 @@ dea
 *.iml
 /target
 *.iws
+*.ipr

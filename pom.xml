@@ -2,8 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  
+
     <modelVersion>4.0.0</modelVersion>
+	<groupId>com.el.crm.solr.csm</groupId>
     <artifactId>solr-csm-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -11,6 +12,7 @@
     <properties>
         <solr.version>5.2.0</solr.version>
         <hadoop.version>2.6.0</hadoop.version>
+		<log4j.version>1.2.17</log4j.version>
     </properties>
 
     <dependencies>
@@ -42,6 +44,7 @@
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-solrj</artifactId>
+			<version>${solr.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
@@ -136,14 +139,17 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.6</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
+			 <version>${log4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.7.6</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -174,6 +180,7 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
+			<version>1.10</version>
         </dependency>
         <dependency>
             <groupId>commons-collections</groupId>
@@ -299,6 +306,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+			 <version>5.1.5</version>
         </dependency>
         <dependency>
             <groupId>org.apache.solr</groupId>
