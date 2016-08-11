@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%7r] %6p - %30.30c - %m \n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="info"/>
+        </filter>
+    </appender>
+    <appender name="FILE-ALL" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <param name="file" value="/export/home/tomcat/logs/solr.csmfeedbackrecord.el.net/feedback-solr-all.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d [%7r] %6p - %30.30c - %m \n"/>
+        </layout>
+    </appender>
+    <category name="com.el.solr.listener" additivity="false">
+        <priority value="error"/>
+        <appender-ref ref="FILE-ALL"/>
+    </category>
+    <category name="org.apache.solr" additivity="false">
+        <priority value="error"/>
+        <appender-ref ref="FILE-ALL"/>
+    </category>
+    <root>
+        <priority value="error"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE-ALL"/>
+    </root>
+</log4j:configuration>

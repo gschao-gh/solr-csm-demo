@@ -1,0 +1,15 @@
+<dataConfig>
+    <dataSource type="JdbcDataSource" name="solrDB"  driver="com.mysql.jdbc.Driver" url="${el-crm-import-source-url}" user="${el-crm-import-source-user}" password="${el-crm-import-source-passwd}"/>
+    <document>
+      <entity  dataSource="solrDB"  name="d_mobile_userfeedback" query="select *  from d_mobile_userfeedback" >
+        <field column="id" name="id"/>
+        <field column="imgPath" name="imgPath"/>
+        <field column="platform" name="platform"/>
+        <field column="appversion" name="appversion"/>
+        <field column="description" name="description"/>
+        <field column="uid" name="uid"/>
+        <field column="mobile" name="mobile"/>
+        <field column="cdate" name="cdate"/>
+       </entity>
+     </document>
+</dataConfig>
