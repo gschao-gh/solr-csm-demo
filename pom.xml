@@ -350,13 +350,13 @@
                 <el-crm-solr.bootstrap_conf>true</el-crm-solr.bootstrap_conf>
                 <el-crm-solr.collection_name>csmfeedbackrecord</el-crm-solr.collection_name>
                 <el-crm-solr.numShards>1</el-crm-solr.numShards>
-                <el-crm-solr.shardNmae>shard1</el-crm-solr.shardNmae>
-                <el-crm-solr.zkHost>127.0.0.1:2181/solr/csmfeedbackrecord</el-crm-solr.zkHost>
+                <el-crm-solr.shardNmae>shard2</el-crm-solr.shardNmae>
+                <el-crm-solr.zkHost>192.168.2.249:12181/solr/csmfeedbackrecord</el-crm-solr.zkHost>
                 <el-crm-solr.solr.data.dir>/export/data/solr.csmfeedbackrecord.el.net</el-crm-solr.solr.data.dir>
 
-                <el-crm-import-source-url><![CDATA[jdbc:mysql://127.0.0.1:3306/test_db]]></el-crm-import-source-url>
-                <el-crm-import-source-user>root</el-crm-import-source-user>
-                <el-crm-import-source-passwd>root</el-crm-import-source-passwd>
+                <el-crm-import-source-url><![CDATA[jdbc:mysql://192.168.1.213:3306/eloan_db]]></el-crm-import-source-url>
+                <el-crm-import-source-user>update_all</el-crm-import-source-user>
+                <el-crm-import-source-passwd>oasdh</el-crm-import-source-passwd>
             </properties>
         </profile>
         <profile>
